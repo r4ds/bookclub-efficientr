@@ -1,4 +1,4 @@
-# {{{chapter_title}}}
+# Efficient workflow
 
 **Learning objectives:**
 
