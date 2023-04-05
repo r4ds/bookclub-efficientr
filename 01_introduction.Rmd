@@ -2,23 +2,110 @@
 
 **Learning objectives:**
 
-- THESE ARE NICE TO HAVE BUT NOT ABSOLUTELY NECESSARY
+When we finish this chapter, we will be able to:
 
-## SLIDE 1 {-}
+-   Predict how this book will be **useful for us.**
+-   Compare and contrast **algorithmic efficiency** and **programmer productivity.**
+-   Explain why **efficiency of R programming** might be different from **efficiency in other programming languages.**
+-   Describe **why efficiency is important.**
+-   Explore **general skills** to improve efficiency.
+-   Use **benchmarking** to measure code speed.
+-   Use **profiling** to locate slow code.
 
-- ADD SLIDES AS SECTIONS (`##`).
-- TRY TO KEEP THEM RELATIVELY SLIDE-LIKE; THESE ARE NOTES, NOT THE BOOK ITSELF.
+## Who is this for? {.unnumbered}
 
-## Meeting Videos {-}
+Answer: Everybody!
 
-### Cohort 1 {-}
+-   ⬆️ programming xp / ⬇️ R xp: avoid R pitfalls
+-   ⬇️ programming xp / ⬆️ R xp: tricks from CS
+-   ⬇️ programming xp / ⬇️ R xp: develop good habits
+-   ⬆️ programming xp / ⬆️ R xp: we are smarter than me!
+
+## Who are we? {.unnumbered}
+
+**Let's get to know one another!**
+
+1.  What's your **name** & **location?**
+2.  How many **R4DS book clubs** have you participated in?
+3.  How much **experience** do you have **with R?** How do you use it?
+4.  How much **programming experience** do you have outside R (if any)?
+
+## Types of efficiency {.unnumbered}
+
+-   **Algorithmic efficiency:** How quickly the computer can run code.
+-   **Programmer productivity:** How quickly the person can get things done.
+
+## Why is R different? {.unnumbered}
+
+-   **Lots of ways to do everything.**
+-   **R isn't compiled**, but **wraps compiled code.**
+-   R is mostly **functional,** but can also be **object-oriented.**
+-   R runs in **RAM** (vs on disk).
+-   R has great **IDEs.**
+    -   RStudio? VSCode? Other?
+-   R has the **best community.**
+
+## Why efficiency? {.unnumbered}
+
+-   Algorithmic efficiency: **Less waiting** for the computer.
+-   Programmer productivity: **Try more** things / try things faster.
+
+## General efficiency skills {.unnumbered}
+
+-   **Touch typing:** Do you?
+-   **Consistent styles**
+    -   **packageName**
+    -   `function()`
+    -   `object`
+    -   `fully::qualified()`
+
+## Benchmarking {.unnumbered}
+
+-   Most useful to **compare approaches.**
+-   They recommend **microbenchmark**.
+-   **bench** is a newer alternative.
+    -   \~Prettier.
+    -   Includes RAM.
+    -   More dependencies.
+
+## Benchmarking: microbenchmark {.unnumbered}
+
+```{r 01-benchmarking-microbenchmark}
+df <- data.frame(v = 1:4, name = letters[1:4])
+
+microbenchmark::microbenchmark(df[3, 2], df[3, "name"], df$name[3])
+```
+
+## Benchmarking: bench {.unnumbered}
+
+```{r 01-benchmarking-bench}
+df <- data.frame(v = 1:4, name = letters[1:4])
+
+bench::mark(df[3, 2], df[3, "name"], df$name[3])
+```
+
+Other variables: `n_itr`, `n_gc`, `total_time`, `result`, `memory`, `time`, `gc`
+
+## Profiling {.unnumbered}
+
+-   **profvis**
+-   Avoid **optimizing the wrong thing.**
+    -   Improve programmer productivity at improving algorithmic efficiency.
+
+![](images/f1_2_profvis-ice.png){alt="profvis output. The expression is broken down into steps, with time and percentage of total time for each step. The code steps are: 1. library('rnoaa'), 800 ms, 52%; 2. library('ggplot2'), 30 ms, 2%; 3. out" width="100%"}
+
+## Meeting Videos {.unnumbered}
+
+### Cohort 1 {.unnumbered}
 
 `r knitr::include_url("https://www.youtube.com/embed/URL")`
 
 <details>
-<summary> Meeting chat log </summary>
 
-```
+<summary>Meeting chat log</summary>
+
+```         
 LOG
 ```
+
 </details>
