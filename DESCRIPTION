@@ -11,6 +11,8 @@ URL: https://r4ds.github.io/bookclub-efficientr,
 Depends:
     R (>= 3.1.0)
 Imports: 
+    bench,
     bookdown,
+    microbenchmark,
     rmarkdown
 Encoding: UTF-8
