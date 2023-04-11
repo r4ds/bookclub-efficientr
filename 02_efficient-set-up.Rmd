@@ -2,12 +2,72 @@
 
 **Learning objectives:**
 
-- THESE ARE NICE TO HAVE BUT NOT ABSOLUTELY NECESSARY
+When we finish this chapter, we will be able to:
 
-## SLIDE 1 {-}
+-   Use system monitoring to identify bottlenecks in our hardware/code.
+-   Keep our R installation and packages up-to-date.
+-   Make use of RStudio’s powerful autocompletion capabilities and shortcuts.
+-   Modify `.Rprofile` and `.Renviron`.
+-   Use BLAS (?) if our R number crunching is too slow.
 
-- ADD SLIDES AS SECTIONS (`##`).
-- TRY TO KEEP THEM RELATIVELY SLIDE-LIKE; THESE ARE NOTES, NOT THE BOOK ITSELF.
+
+## System monitoring {-}
+
+-   Identify if your code is memory-limited or processor-limited.
+-   Makes me want to work on dedicated (isolated) server!
+    -   (I couldn't see much of anything amid other noise in graphical view)
+    -   (this parallel code isn't parallel on Win)
+
+```{r 02-system, eval = FALSE}
+# 1: Create large dataset
+X <- as.data.frame(matrix(rnorm(1e8), nrow = 1e7))
+# 2: Find the median of each column using a single core
+r1 <- lapply(X, median)
+# 3: Find the median of each column using many cores
+r2 <- parallel::mclapply(X, median)
+```
+
+
+## Updating R & Packages {-}
+
+-   {installr} to easily update on Windows
+-   Good practice: load packages at top of script
+-   Add `update.packages(ask = FALSE)` to `.Rprofile`???
+
+
+## R Startup {-}
+
+-   Command line: `--no-environ`, `--no-init`, `--no-restore`, `--no-save` (or `--vanilla` for all) to speed up startup
+-   `.Renviron`: set environment variables
+-   `.Rprofile`: run R code
+-   `usethis::edit_r_environ()` & `usethis::edit_r_profile()`
+-   [What They Forgot to Teach You About R Book Club](r4ds.io/rwtf)
+-   `options(continue = "  ")` is new to me!
+-   `.Last()` runs at *end* of session
+
+
+## RStudio Setup {-}
+
+-   `usethis::use_blank_slate()` to auto-set useful options
+-   `Ctrl-Alt+B`: Run to current line
+-   Use projects
+
+
+## WTF is BLAS? {-}
+
+-   Basic Linear Algebra System
+-   Potentially way faster for matrix math
+-   Installation was beyond me ("just" follow these dozens of steps!)
+
+
+## Other R Intepreters
+
+-   Microsoft R Open: [Dead](https://techcommunity.microsoft.com/t5/azure-sql-blog/microsoft-r-application-network-retirement/ba-p/3707161)
+-   Rho: [Dead](https://github.com/rho-devel/rho#development-on-rho-has-been-suspended-indefinitely)
+-   pqR: [No updates since 2020-07-23](http://www.pqr-project.org/)
+-   Renjin: [Maybe not dead??](https://github.com/Alipsa/ride)
+-   webR: [The new cool thing!!!](https://webrider.rud.is/)
+
 
 ## Meeting Videos {-}
 
