@@ -98,14 +98,45 @@ Other variables: `n_itr`, `n_gc`, `total_time`, `result`, `memory`, `time`, `gc`
 
 ### Cohort 1 {.unnumbered}
 
-`r knitr::include_url("https://www.youtube.com/embed/URL")`
+`r knitr::include_url("https://www.youtube.com/embed/oGz7YLw8njg")`
 
 <details>
 
 <summary>Meeting chat log</summary>
 
 ```         
-LOG
+00:28:13	Keuntae_Kim:	KNIME
+00:38:26	Keuntae_Kim:	Maybe Eclipse? I do not use it, I heard that someone from CS uses it.
+00:39:00	Keuntae_Kim:	No Python community for study group!
+00:44:29	Priyanka:	There’s a super active python community in Boston at least.
+00:44:38	Priyanka:	And a few PyLadies groups too
+00:45:56	Keuntae_Kim:	Got it! I did not have a chance to join those communities because I studied Python by myself. Maybe worthwhile to check out Python communities then!
+00:46:09	Priyanka:	Reacted to "Got it! I did not ha..." with 👍
+00:46:39	Priyanka:	Replying to "Got it! I did not ha..."
+
+For python, I think VSCode works well( only heard so), then there is PyCharm and Spider.
+00:46:47	Priyanka:	Replying to "Got it! I did not ha..."
+
+For IDE
+00:47:21	Priyanka:	Replying to "Got it! I did not ha..."
+
+And now RStudio is getting more and more Python ( and SQL, Julia etc.) friendly too.
+00:47:53	Keuntae_Kim:	Replying to "Got it! I did not ha..."
+
+Agree. I frequently use Jupyter Notebook because of its markdown ability.
+00:48:31	Keuntae_Kim:	Replying to "Got it! I did not ha..."
+
+Yes, there are R packages that allow us to use Python, SQL in RStudio.
+00:50:29	Priyanka:	Replying to "Got it! I did not ha..."
+
+Wow that’s interesting to know about JupyTer
+00:50:38	Priyanka:	Replying to "Got it! I did not ha..."
+
+I have tried it initially for a while
+00:50:56	Priyanka:	Replying to "Got it! I did not ha..."
+
+It was ok ok … yeah nothing beats RStudio for now
+00:54:05	Keuntae_Kim:	Bye!
 ```
 
 </details>
