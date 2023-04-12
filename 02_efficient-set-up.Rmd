@@ -60,7 +60,7 @@ r2 <- parallel::mclapply(X, median)
 -   Installation was beyond me ("just" follow these dozens of steps!)
 
 
-## Other R Intepreters
+## Other R Intepreters {-}
 
 -   Microsoft R Open: [Dead](https://techcommunity.microsoft.com/t5/azure-sql-blog/microsoft-r-application-network-retirement/ba-p/3707161)
 -   Rho: [Dead](https://github.com/rho-devel/rho#development-on-rho-has-been-suspended-indefinitely)
