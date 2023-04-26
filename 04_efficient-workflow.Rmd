@@ -2,12 +2,81 @@
 
 **Learning objectives:**
 
-- THESE ARE NICE TO HAVE BUT NOT ABSOLUTELY NECESSARY
+When we finish this chapter, we will be able to:
 
-## SLIDE 1 {-}
+- Sketch an initial workflow for our projects.
+- Identify workflow software tools both inside and outside R.
+- Divide the work into chunks to better delineate what needs to get done.
+- Improve documentation and reproducibility of projects.
 
-- ADD SLIDES AS SECTIONS (`##`).
-- TRY TO KEEP THEM RELATIVELY SLIDE-LIKE; THESE ARE NOTES, NOT THE BOOK ITSELF.
+## Top tips for efficient workflow {-}
+
+- Start with pen and paper to sketch overall workflow.
+- Make a plan for how to get things done, dividing the work into chunks.
+- Select packages early to boost efficiency once coding begins.
+- Document early and thoroughly.
+- Emphasize reproducibility. knitr recommended as a handy tool for this
+
+*These tips apply to different project scopes, but may be implemented differently depending on needs.*
+
+## Tip 1: Start with pen and paper {-}
+
+*"Smart preparation minimizes work"*
+
+Before starting a project, understanding the scope and generating a plan helps smooth workflow.
+
+**Technical debt:** Lack of planning can lead to code slop that will slow us down in the long run.
+
+Division of labor and consideration of the scale/scope of a project.
+- Who will work on the project?
+- What management tools will be needed? GitHub, Jira, Trello, etc.
+- What's the timescale, and what is reasonable within that timescale?
+
+## Tip 2: Chunk the work {-}
+
+![image](https://user-images.githubusercontent.com/131881637/234586682-1a94f26e-c560-442f-a698-6d71118e97c8.png)
+
+Think through the phases of work, and try to estimate the demands and timescale of each phase.
+
+Using SMART chunks to ensure things are broken up in ways that are useful:
+- Specific
+- Measurable
+- Attainable
+- Realistic
+- Time-bound
+
+![image](https://user-images.githubusercontent.com/131881637/234587350-1dfa12e7-ccf5-4038-b7cd-ef41050eefd0.png)
+
+Variety of R packages that can help with this:
+- plan
+- plotrix
+- DiagrammeR
+
+## Tip 3: Package selection {-}
+
+*"R is notorious for allowing users to solve problems in many ways."*
+
+Often someone else has solved problems you're going to approach. No need to reinvent the wheel!
+
+Effective package selection at the outset helps establish your workflow and constrain your solution space.
+
+Also useful emphasis on package intercompatibility -- e.g. working within the tidyverse.
+
+Lots of packages available. *How do people choose the right ones?*
+
+## Tip 4: Document throughout {-}
+
+Keep code well commented for others and for yourself.
+
+R Markdown framework super helpful for this. Using the options within the code chunks (eval and echo) thoughtfully to boost documentation.
+
+## Tip 5: Publishing with reproducibility {-}
+
+Dynamic document preparation within R (e.g. Rmd). Limit the need to manually copy things if there are data changes.
+
+Cache code chunks that don't need to be re-run regularly and that are time consuming.
+
+Consider treating a project as an R package?
 
 ## Meeting Videos {-}
 
