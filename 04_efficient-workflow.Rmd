@@ -28,6 +28,7 @@ Before starting a project, understanding the scope and generating a plan helps s
 **Technical debt:** Lack of planning can lead to code slop that will slow us down in the long run.
 
 Division of labor and consideration of the scale/scope of a project.
+
 - Who will work on the project?
 - What management tools will be needed? GitHub, Jira, Trello, etc.
 - What's the timescale, and what is reasonable within that timescale?
@@ -39,6 +40,7 @@ Division of labor and consideration of the scale/scope of a project.
 Think through the phases of work, and try to estimate the demands and timescale of each phase.
 
 Using SMART chunks to ensure things are broken up in ways that are useful:
+
 - Specific
 - Measurable
 - Attainable
@@ -48,6 +50,7 @@ Using SMART chunks to ensure things are broken up in ways that are useful:
 ![image](https://user-images.githubusercontent.com/131881637/234587350-1dfa12e7-ccf5-4038-b7cd-ef41050eefd0.png)
 
 Variety of R packages that can help with this:
+
 - plan
 - plotrix
 - DiagrammeR
