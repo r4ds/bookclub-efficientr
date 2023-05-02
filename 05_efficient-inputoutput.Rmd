@@ -1,13 +1,85 @@
 # Efficient input/output
 
-**Learning objectives:**
+## Overview {-}
 
-- THESE ARE NICE TO HAVE BUT NOT ABSOLUTELY NECESSARY
+- General principle in reproducible data management
+- **rio** package
+- Plain text formats
+- Binary formats
+- Getting data
 
-## SLIDE 1 {-}
+## General principle in reproducible data management {-}
 
-- ADD SLIDES AS SECTIONS (`##`).
-- TRY TO KEEP THEM RELATIVELY SLIDE-LIKE; THESE ARE NOTES, NOT THE BOOK ITSELF.
+::: {#hello .infobox}
+**Never modify raw data files.**
+:::
+
+## Using `rio` {-}
+
+‘A Swiss-Army Knife for Data I/O’
+
+- `rio::import()`
+- `rio::export()`
+
+Supports many formats including .feather, .json, .parquet, .xlsx, Google sheets, ....
+
+https://cloud.r-project.org/web/packages/rio/vignettes/rio.html
+
+`rio::convert()`
+
+## Plain text formats (1) {-}
+
+- csv format (comma separated)
+- delimited format (tab separated)
+
+Functions:
+
+- `utils::read.csv()`, `utils::read.delim()`, `utils::read.table()`
+- `readr::read_csv()`, `readr::read_tsv()`
+- `data.table::fread()` (also has a `select` argument)
+
+## Plain text formats (2) {-}
+
+The functions work faster if prespecifying column types.
+
+If not prespecifying column types, `readr` and `data.table` make a guess (based on first 1000 rows).
+
+For columns with first 1000 rows as `NA`:
+
+- at the time of writing the book, such column was set as logical by `readr::read_csv()`
+- nowadays such column is assumed to be character
+
+## Binary formats {-}
+
+- Compared to plain text formats, these formats decrease **read/write times** and **file sizes**.
+- But they'are **not human-readable** and may be **less language-agnostic**.
+
+format | package | functions | note
+:--- | :--- | :--- | :---
+`.RData` | **base** | `save()`, `load()` | multiple R objects (including names)
+`.Rds` | **base** | `saveRDS()`, `readRDS()` | single R object (no names)
+`.feather` | **[arrow](https://arrow.apache.org/docs/r)** (**feather**) | `write_feather()`, `read_feather()` | language-agnostic, fast ('arrow'='feather' format)
+`.parquet` | **[arrow](https://arrow.apache.org/docs/r)** | `write_parquet()`, `read_parquet()`, `write_dataset()`, `open_dataset()` | language-agnostic, fast
+
+## Getting data (1) {-}
+
+From the internet:
+
+- `base::download.file()`
+-  `curl::curl_download()`, `curl::multi_download()`
+- more packages at [rOpenSci](https://ropensci.org/) and the [CRAN task view on Web Technologies](https://cran.r-project.org/web/views/WebTechnologies.html)
+
+## Getting data (2) {-}
+
+Getting R objects distributed with an R package:
+
+- `data(package = "<package-name>")`: enlists available objects
+- `data(<object1>, <object2>, package = "<package-name>")`
+
+Getting raw data files distributed with an R package:
+
+`list.files(system.file("extdata",package ="<package-name>"))`
+
 
 ## Meeting Videos {-}
 
