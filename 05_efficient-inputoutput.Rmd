@@ -1,11 +1,16 @@
 # Efficient input/output
 
+## What? {-}
+
+This is about reading and writing data in R.
+
 ## Overview {-}
 
 - General principle in reproducible data management
 - **rio** package
 - Plain text formats
 - Binary formats
+- More on reading and writing with **arrow**
 - Getting data
 
 ## General principle in reproducible data management {-}
@@ -49,7 +54,9 @@ For columns with first 1000 rows as `NA`:
 - at the time of writing the book, such column was set as logical by `readr::read_csv()`
 - nowadays such column is assumed to be character
 
-## Binary formats {-}
+There's also `read_csv_arrow()`, `read_tsv_arrow()`, `read_delim_arrow()` and `read_json_arrow()` from the **arrow** package: see further.
+
+## Binary formats (1) {-}
 
 - Compared to plain text formats, these formats decrease **read/write times** and **file sizes**.
 - But they'are **not human-readable** and may be **less language-agnostic**.
@@ -61,17 +68,69 @@ format | package | functions | note
 `.feather` | **[arrow](https://arrow.apache.org/docs/r)** (**feather**) | `write_feather()`, `read_feather()` | language-agnostic, fast ('arrow'='feather' format)
 `.parquet` | **[arrow](https://arrow.apache.org/docs/r)** | `write_parquet()`, `read_parquet()`, `write_dataset()`, `open_dataset()` | language-agnostic, fast
 
+## Binary formats (2) {-}
+
+Parquet and 'Apache Arrow IPC format' (formerly called the Feather format) are column-based.
+
+From https://arrow.apache.org/blog/2019/08/08/r-package-on-cran/:
+
+> Note that both Feather and Parquet are columnar data formats that allow sharing data frames across R, Pandas, and other tools. When should you use Feather and when should you use Parquet? Parquet balances space-efficiency with deserialization costs, making it an ideal choice for remote storage systems like HDFS or Amazon S3. Feather is designed for fast local reads, particularly with solid-state drives, and is not intended for use with remote storage systems. 
+
+## Binary formats (3) {-}
+
+- `read_parquet(col_select =)` returns a data frame (with selected columns)
+- `read_parquet(as_data_frame = FALSE)` returns the more low-level Arrow Table object
+
+R object attributes are preserved when writing data to Parquet or Arrow/Feather files and when reading those files back into R.
+
+Can handle in-memory data _and_ on-disk data larger than memory.
+
+In both cases, can be exchanged with other applications _without copying data_.
+
+## More on I/O with [`arrow`](https://arrow.apache.org/docs/r) (1) {-}
+
+`open_dataset()`: makes a connection to (larger-than-memory) file(s) for lazy querying
+
+- returns an Arrow Dataset object in R
+- only collects data on `collect()`. Cf. **dbplyr** package
+- also useful to access large csv files, although slower than the binary alternatives!
+
+https://r4ds.hadley.nz/arrow.html
+
+> if you’re starting with your own data (perhaps CSV files), you can either load it into a database or convert it to parquet. In general, it’s hard to know what will work best, so in the early stages of your analysis we’d encourage you to try both and pick the one that works the best for you
+
+## More on I/O with [`arrow`](https://arrow.apache.org/docs/r) (2) {-}
+
+Partitioning large csv files to a Parquet dataset consisting of multiple files:
+
+```{r eval=FALSE}
+seattle_csv |>
+  group_by(CheckoutYear) |>
+  write_dataset(path = pq_path, format = "parquet")
+```
+
+This will result in a massive difference in performance.
+
+There's also `arrow::to_duckdb()` for converting a dataset to DuckDB.
+
+**arrow** also provides `read_csv_arrow()`, `read_tsv_arrow()`, `read_delim_arrow()` and `read_json_arrow()`.
+
+## More on I/O with [`arrow`](https://arrow.apache.org/docs/r) (3) {-}
+
+[Very limited benchmark of some reading functions in R](https://gist.github.com/florisvdh/b383e73347406e9ada120fd3ab67f92a)
+
 ## Getting data (1) {-}
 
 From the internet:
 
 - `base::download.file()`
 -  `curl::curl_download()`, `curl::multi_download()`
+    -  also use `curl::multi_download()` for single large files: it gives you a progress bar and it can resume the download if it's interrupted
 - more packages at [rOpenSci](https://ropensci.org/) and the [CRAN task view on Web Technologies](https://cran.r-project.org/web/views/WebTechnologies.html)
 
 ## Getting data (2) {-}
 
-Getting R objects distributed with an R package:
+Getting R objects that are distributed with an R package:
 
 - `data(package = "<package-name>")`: enlists available objects
 - `data(<object1>, <object2>, package = "<package-name>")`
