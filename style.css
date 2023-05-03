@@ -17,3 +17,10 @@
 .book.font-size-4 .book-body .page-inner section {
   font-size: 3em !important;
 }
+
+.infobox {
+  padding: 1em 1em 1em 4em;
+  border: 5px solid black;
+  border-radius: 10px;
+  background: #f5f5f5 5px center/3em no-repeat;
+}
