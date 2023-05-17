@@ -2,12 +2,109 @@
 
 **Learning objectives:**
 
-- THESE ARE NICE TO HAVE BUT NOT ABSOLUTELY NECESSARY
+-   Clean data at the beginning of a project to save time in the long run.
+-   Recognize the packages in the {tidyverse}.
+-   Use {janitor} to semi-automate common data cleaning tasks.
+-   Understand when {data.table} can make data wrangling more efficient.
+-   Explore {targets} for pipeline efficiency.
 
-## SLIDE 1 {-}
+## Why data carpentry? {-}
 
-- ADD SLIDES AS SECTIONS (`##`).
-- TRY TO KEEP THEM RELATIVELY SLIDE-LIKE; THESE ARE NOTES, NOT THE BOOK ITSELF.
+> "Give me six hours to chop down a tree and I will spend the first four sharpening the axe."
+
+-   Hadley Wickham became (nerd) famous largely due to his [formalization of tidy data](https://www.jstatsoft.org/article/view/v059i10).
+    -   Each variable is a column.
+    -   Each observation is a row.
+    -   Each type of observational unit is a table.
+-   Consistent structure means downstream tools can be built to expect that structure.
+
+## The tidyverse: Core {-}
+
+The logos that are on [tidyverse.org](https://www.tidyverse.org/):
+
+-   {tibble}: Simple Data Frames
+-   {dplyr}: A Grammar of Data Manipulation
+-   {tidyr}: Tidy Messy Data
+-   {purrr}: Functional Programming Tools
+-   {readr}: Read Rectangular Text Data
+-   {forcats}: Tools for Working with Categorical Variables (Factors)
+-   {stringr}: Simple, Consistent Wrappers for Common String Operations
+-   {ggplot2}: Create Elegant Data Visualisations Using the Grammar of Graphics
+-   {tidyverse}: Easily Install and Load the 'Tidyverse'
+
+## The tidyverse: Readers {-}
+
+-   {dbplyr}: A 'dplyr' Back End for Databases
+-   {dtplyr}: Data Table Back-End for 'dplyr'
+-   {googledrive}: An Interface to Google Drive
+-   {googlesheets4}: Access Google Sheets using the Sheets API V4
+-   {haven}: Import and Export 'SPSS', 'Stata' and 'SAS' Files
+-   {jsonlite}: A Simple and Robust JSON Parser and Generator for R
+-   {readxl}: Read Excel Files
+-   {rvest}: Easily Harvest (Scrape) Web Pages
+-   {xml2}: Parse XML
+-   {httr}: Tools for Working with URLs and HTTP
+    -   {httr2}: Perform HTTP Requests and Process the Responses
+
+## The tidyverse: Others {-}
+
+### Debugging {-}
+
+-   {conflicted}: An Alternative Conflict Resolution Strategy
+-   {reprex}: Prepare Reproducible Example Code via the Clipboard
+
+### Formatters {-}
+
+-   {lubridate}: Make Dealing with Dates a Little Easier
+    -   {clock}: Date-Time Types and Tools
+-   {broom}: Convert Statistical Objects into Tidy Tibbles
+
+## The tidyverse: Others 2 {-}
+
+### Behind the scenes {-}
+
+-   {cli}: Helpers for Developing Command Line Interfaces
+-   {hms}: Pretty Time of Day
+-   {pillar}: Coloured Formatting for Columns
+-   {ragg}: Graphic Devices Based on AGG
+-   {rlang}: Functions for Base Types and Core R and 'Tidyverse' Features
+-   {rstudioapi}: Safely Access the RStudio API
+
+## The tidyverse: Superseded? {-}
+
+-   {magrittr}: A Forward-Pipe Operator for R
+    -   Base pipe: |>
+-   {modelr}: Modelling Functions that Work with the Pipe
+    -   Not covered in R4DS 2e
+    -   {tidymodels}
+
+## janitor {-}
+
+-   clean_names()
+-   remove_constant() & remove_empty()
+    -   I like `quiet = FALSE`
+-   tabyl()
+-   others?
+
+## data.table {-}
+
+From DESCRIPTION:
+
+-   Fast aggregation of large data (e.g. 100GB in RAM)
+-   Fast ordered joins
+-   Fast add/modify/delete of columns by group using no copies at all
+-   List columns
+-   Friendly and fast character-separated-value read/write
+-   Offers a natural and flexible syntax, for faster development.
+
+## targets {-}
+
+From DESCRIPTION:
+
+> "Pipeline tools coordinate the pieces of computationally demanding analysis projects. The 'targets' package is a 'Make'-like pipeline tool for statistics and data science in R. The package skips costly runtime for tasks that are already up to date, orchestrates the necessary computation with implicit parallel computing, and abstracts files as R objects. If all the current output matches the current upstream code and data, then the whole pipeline is up to date, and the results are more trustworthy than otherwise. The methodology in this package borrows from GNU 'Make' (2015, ISBN:978-9881443519) and 'drake' (2018, <doi:10.21105/joss.00550>)."
+
+-   *Ie,* only run the things that have changed.
+-   Also see {tarchetypes} to make {targets} easier to use.
 
 ## Meeting Videos {-}
 
