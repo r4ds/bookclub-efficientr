@@ -201,7 +201,7 @@ Remember that certain voltage applied to or removed to/from each cell?
     - Mirroring increases read speeds
     - Striping increases write speeds
       - Some implementations allow for extra parity disks to protect against data loss
-    - You can a
+    - You can also mix and match striping and mirroring (usually mirroring a set of striped drives)
   - Can also help protect against data loss
   
 ## 32 and 64-bit Systems {-}
