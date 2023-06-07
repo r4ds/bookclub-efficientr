@@ -70,6 +70,24 @@ help(topic, package = NULL, lib.loc = NULL,
 
 -   `help_type` "text", "html", or "pdf"
 
+## R source code {-}
+
+-   Learn to use F2 in RStudio!
+-   `pkgname:::` to dig through internals
+-   `usethis::create_from_github()`
+-   [cran org on github](https://github.com/cran)
+    -   Eg [`expr()` on CRAN](https://github.com/search?q=org%3Acran+%2F%28%5E%7C%5Cs%2B%7C%3A%3A%29expr%5C%28%2F&type=code)
+
+## swirl & learnr {-}
+
+-   {swirl} hasn't been updated in 3 years
+-   {learnr} is Posit's teaching package
+    -   Some in Tutorial tab in RStudio
+    -   [Examples](https://rstudio.github.io/learnr/articles/examples.html)
+    -   `learnr::available_tutorials()`
+    -   `learnr::run_tutorial("pca_recipes", package = "learntidymodels")`
+    -   I really need to experiment with this one!
+
 ## R journals, etc {-}
 
 -   Package websites have become super helpful
