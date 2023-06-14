@@ -28,9 +28,9 @@
     - A hard drive may be advertised as 1TB, but only has 931GB of usable storage
     
 ```{r echo=FALSE, message=FALSE}
-require(ggplot2)
-require(dplyr)
-require(tidyr)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
 prefixes <- c("ki", "me", "gi", "te", "pe", "ex", "ze", "yo")
 data.frame(
   prefix = factor(prefixes, levels = rev(prefixes)),

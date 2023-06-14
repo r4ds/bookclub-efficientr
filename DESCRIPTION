@@ -13,6 +13,9 @@ Depends:
 Imports: 
     bench,
     bookdown,
+    dplyr,
+    ggplot2,
     microbenchmark,
-    rmarkdown
+    rmarkdown,
+    tidyr
 Encoding: UTF-8
