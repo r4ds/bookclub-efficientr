@@ -190,7 +190,7 @@ Remember that certain voltage applied to or removed to/from each cell?
   - Like with CMR and SMR, manufacturers publish this, but it's not necessarily easy to find
   
 *image credit binarytides.com*
-  
+
 ## The Storage Deep Dive {-}
 
 - SSD and HDD storage can be mixed to meet needs

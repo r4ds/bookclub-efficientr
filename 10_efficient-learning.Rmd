@@ -2,12 +2,133 @@
 
 **Learning objectives:**
 
-- THESE ARE NICE TO HAVE BUT NOT ABSOLUTELY NECESSARY
+-   Use R's built-in (and packaged) help system to learn.
+-   Read about R use cases and developments.
+-   Get help online.
+-   Learn from books and tutorials.
+-   Teach to learn.
 
-## SLIDE 1 {-}
+## R help {-}
 
-- ADD SLIDES AS SECTIONS (`##`).
-- TRY TO KEEP THEM RELATIVELY SLIDE-LIKE; THESE ARE NOTES, NOT THE BOOK ITSELF.
+Multiple levels of help in R:
+
+-   `??topic` == `help.search("topic")`
+-   `apropos()` (print object matching string, no slide for this one)
+-   `browseVignettes()`
+-   `?function` == `help("function")`
+-   Read source code
+-   `{swirl}` & `{learnr}`
+
+## help dot search {-}
+
+You can super-charge `??`!
+
+```{r 10-help.search, eval = FALSE}
+help.search(pattern, fields = c("alias", "concept", "title"),
+            apropos, keyword, whatis, 
+            ignore.case = TRUE,
+            package = NULL, lib.loc = NULL,
+            help.db = getOption("help.db"),
+            verbose = getOption("verbose"),
+            rebuild = FALSE, agrep = NULL, use_UTF8 = FALSE,
+            types = getOption("help.search.types"))
+```
+
+-   `apropos` Search topics & title (separate from `pattern`)
+-   `keyword` Specifically search `keywords` field
+-   `whatis` Search in topics
+-   `agrep` Specify how fuzzy to be (see `agrep()` function)
+-   `types` "vignette", "help", and/or "demo"
+
+## browseVignettes {-}
+
+Source code for `browseVignettes()` led me to `tools::getVignetteInfo()`
+
+```{r 10-getVignetteInfo, eval = FALSE}
+tibble::as_tibble(tools::getVignetteInfo()) |> 
+  dplyr::glimpse()
+
+#> Rows: 519
+#> Columns: 7
+#> $ Package <chr> "attempt", "attempt", "attempt", "attempt", "atte…
+#> $ Dir     <chr> "mypath/attempt", "mypath/attempt", "mypath/attem…
+#> $ Topic   <chr> "c_adverbs", "e_conditions", "d_if", "a_intro_att…
+#> $ File    <chr> "c_adverbs.Rmd", "e_conditions.Rmd", "d_if.Rmd", …
+#> $ Title   <chr> "Adverbs", "Condition handling", "If", "Intro to …
+#> $ R       <chr> "c_adverbs.R", "e_conditions.R", "d_if.R", "a_int…
+#> $ PDF     <chr> "c_adverbs.html", "e_conditions.html", "d_if.html…
+```
+
+## help {-}
+
+```{r 10-help, eval = FALSE}
+help(topic, package = NULL, lib.loc = NULL,
+     verbose = getOption("verbose"),
+     try.all.packages = getOption("help.try.all.packages"),
+     help_type = getOption("help_type"))
+```
+
+-   `help_type` "text", "html", or "pdf"
+
+## R source code {-}
+
+-   Learn to use F2 in RStudio!
+-   `pkgname:::` to dig through internals
+-   `usethis::create_from_github()`
+-   [cran org on github](https://github.com/cran)
+    -   Eg [`expr()` on CRAN](https://github.com/search?q=org%3Acran+%2F%28%5E%7C%5Cs%2B%7C%3A%3A%29expr%5C%28%2F&type=code)
+
+## swirl & learnr {-}
+
+-   {swirl} hasn't been updated in 3 years
+-   {learnr} is Posit's teaching package
+    -   Some in Tutorial tab in RStudio
+    -   [Examples](https://rstudio.github.io/learnr/articles/examples.html)
+    -   `learnr::available_tutorials()`
+    -   `learnr::run_tutorial("pca_recipes", package = "learntidymodels")`
+    -   I really need to experiment with this one!
+
+## R journals, etc {-}
+
+-   Package websites have become super helpful
+-   Posit has [Quarto versions of core R manuals](https://rstudio.github.io/r-manuals/)
+-   We've talked about doing an "R Journal Club" at R4DS, watch for that!
+-   [rdrr.io](https://rdrr.io/) & [R Universe](https://r-universe.dev/search/)
+-   [R-bloggers](https://www.r-bloggers.com/)
+-   [rOpenSci Blog](https://ropensci.org/blog/)
+-   Others?
+
+## Reprexes & online help {-}
+
+-   Use [{reprex}](https://cran.r-project.org/package=reprex) for **repr**oducible **ex**amples
+-   [R4DS #help-\* channels](https://r4ds.io/join)
+-   [Posit Community](https://community.rstudio.com/)
+-   [discoRd](https://discord.gg/UBuG5hzu)
+-   #RStats on Mastodon, LinkedIn, & Twitter
+-   [R tag on StackOverflow](https://stackoverflow.com/questions/tagged/r)
+    -   [R wiki on StackOverflow](https://stackoverflow.com/tags/r/info)
+
+## Book clubs! {-}
+
+-   Current (2023-06-02):
+    -   20 "books"
+    -   24 cohorts
+-   Past:
+    -   85 YouTube playlists
+    -   1337 videos
+-   See #book_club-announce & #book_club-\* on [R4DS Slack](https://r4ds.io/join)
+
+## Teach {-}
+
+> "By teaching, we learn."
+
+-   Answer questions on R4DS!
+    -   [r4ds.io/mentordash](https://r4ds.io/mentordash) 👈 unanswered questions
+-   Lead a discussion in a book club!
+-   Write a blog!
+-   Improve package documentation! 
+-   Write a package!
+-   Write a book!
 
 ## Meeting Videos {-}
 
