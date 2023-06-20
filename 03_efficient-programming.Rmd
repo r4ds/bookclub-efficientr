@@ -13,12 +13,51 @@
 
 ### Cohort 1 {-}
 
-`r knitr::include_url("https://www.youtube.com/embed/URL")`
+`r knitr::include_url("https://www.youtube.com/embed/sX4J0PdtxNk")`
 
 <details>
 <summary> Meeting chat log </summary>
 
 ```
-LOG
+00:04:44	Jon Harmon (jonthegeek):	My microphone/headphones aren't working, I'll be right back. Please tell Priyanka to start if I'm not back in a few minutes!
+00:05:32	Chelsea Faber:	Reacted to "My microphone/headph..." with 👍
+00:16:13	jim rothstein:	Is `rbind` an example of growing a vector (data.frame or tibble)?
+00:18:38	Jon Harmon (jonthegeek):	?purrr::list_rbind()
+00:22:44	jim rothstein:	https://purrr.tidyverse.org/reference/list_c.html
+00:23:54	jim rothstein:	which uses vctrs:: https://vctrs.r-lib.org/reference/vec_bind.html
+00:27:22	jim rothstein:	raw code here,  uses External2() ?    https://github.com/r-lib/vctrs/blob/HEAD/R/bind.R
+00:29:53	jim rothstein:	opinion?    use `stop` or `abort` (rlang?0
+00:30:52	Jon Harmon (jonthegeek):	cli::cli_abort() etc are the new fancy way to go.
+00:34:22	jim rothstein:	Seem to remember rule of thumb:   `message` or `error` is to notify USER.    `cat` is more for developer, debug etc.
+00:36:25	Jon Harmon (jonthegeek):	The general idea is if you're saying something to the user, use things that the user can suppress. I used a package that gave all messages via cat and it was annoying 'cuz I couldn't turn them off in cases where they weren't helpful.
+00:37:56	Jon Harmon (jonthegeek):	Run this: invisible(difftime)
+00:38:30	jim rothstein:	right
+00:39:30	jim rothstein:	fyi cli_abort is wrapper for rlang::abort   (https://github.com/r-lib/cli/blob/HEAD/R/rlang.R)
+00:39:57	Jon Harmon (jonthegeek):	Kinda. It first prepares the message.
+00:40:27	jim rothstein:	true
+00:42:21	Jon Harmon (jonthegeek):	ggplot2:::print.ggplot
+00:43:23	Jon Harmon (jonthegeek):	pillar:::glimpse.tbl
+00:46:35	Jon Harmon (jonthegeek):	https://adv-r.hadley.nz/functions.html?q=invisible#invisible
+00:51:06	jim rothstein:	aren't factors  integers, 1L, 2L under the hood?
+00:52:03	Jon Harmon (jonthegeek):	as.integer(factor(4:6))
+00:52:24	Jon Harmon (jonthegeek):	factor(4:6) + 1
+00:53:10	jim rothstein:	unclass(  a factor)   to see integers?
+00:54:02	jim rothstein:	 unclass(factor(letters))
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+attr(,"levels")
+ [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z"
+00:55:02	jim rothstein:	my 2 cents :   i like the idea of key index in database language
+00:55:27	Jon Harmon (jonthegeek):	x <- factor(letters[1:5])
+00:55:31	Jon Harmon (jonthegeek):	str(x)
+00:56:20	Jon Harmon (jonthegeek):	attr(x, "levels")
+00:56:29	Jon Harmon (jonthegeek):	attributes(x)
+00:56:46	jim rothstein:	my 2 cents;    practing str(), class(), typeof(), attributes() and you will know almost everything
+00:56:56	Priyanka:	Reacted to "my 2 cents;    pract..." with 👍
+00:57:33	jim rothstein:	SEXP
+00:57:43	jim rothstein:	(in C)
+00:58:43	Jon Harmon (jonthegeek):	lobstr::sxp(x)
+01:00:19	Jon Harmon (jonthegeek):	https://memoise.r-lib.org/
+01:08:46	jim rothstein:	learned a lot ... good session
+01:08:51	Chelsea Faber:	Thank you!
 ```
 </details>

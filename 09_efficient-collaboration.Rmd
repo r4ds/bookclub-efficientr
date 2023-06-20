@@ -13,12 +13,39 @@
 
 ### Cohort 1 {-}
 
-`r knitr::include_url("https://www.youtube.com/embed/URL")`
+`r knitr::include_url("https://www.youtube.com/embed/reumHK62Aik")`
 
 <details>
 <summary> Meeting chat log </summary>
 
 ```
-LOG
+00:09:11	Jon Harmon (jonthegeek):	start
+00:12:29	Jon Harmon (jonthegeek):	RStudio: Global Options > Code > Display > Show margin is helpful for marking the 80-character line width.
+00:13:31	Floris Vanderhaeghe:	The {styler} package and its RStudio addins are also very helpful!
+00:13:44	Jon Harmon (jonthegeek):	Reacted to "The {styler} package..." with ☝️
+00:15:55	Gus Lipkin:	There are a few different packages/functions that will compile a list of libraries used.
+I think pacman, attachment, and maybe something coming from devtools or roxygen2
+00:16:24	Floris Vanderhaeghe:	https://rstats.wtf/
+00:24:12	Priyanka:	I found this as an amazing one for naming : 
+
+https://indrajeetpatil.github.io/second-hardest-cs-thing/#/dealing-with-the-second-hardest-thing-in-computer-science
+00:25:21	Gus Lipkin:	Something that I find helps a lot with keeping names straight is breaking everything into functions where the function name says what it does and assigns an object with a similar name `stuff <- get_stuff()` then maybe `boxed <- box_up(stuff)`
+00:25:33	Priyanka:	Reacted to "Something that I fin..." with 👍
+00:29:45	Jon Harmon (jonthegeek):	> data.frame(x <- "a")
+  x.....a.
+1        a
+00:30:03	Floris Vanderhaeghe:	Also the tidyverse style guide disrecommends '=' for assignment. https://style.tidyverse.org/syntax.html?#assignment-1
+00:30:18	Gus Lipkin:	There’s also `->` which is sometimes useful in the terminal or after very long pipelines. But I like the lore about it that the people who made/used S back in the day, kept writing things out in the terminal and forgetting the `<-` at the beginning, so they made `->` so they wouldn’t have to arrow back to the beginning of the lines.
+00:35:09	Gus Lipkin:	`<<-` and `->>` I think they’re called super assignment
+And `%<>%` exists too for piping stuff and assigning (`mtcars %<>% filter(cyl == 4)` would assign back to `mtcars`)
+00:35:46	Priyanka:	https://rdrr.io/github/jesse-smith/covidsms/man/tidyeval-walrus.html
+00:35:56	Gus Lipkin:	`dt[, new_var := 4]` or dt[, `:=`(one = 1, two = 2)]
+00:38:41	Jon Harmon (jonthegeek):	Oh, on the S lore... the <- for assignment exists because the machines where S (or I think maybe a language before S) was developed had an arrow key that typed an arrow into your code.
+00:41:12	Jon Harmon (jonthegeek):	APL is the language that was written with an arrow key: https://www.r-bloggers.com/2018/09/why-do-we-use-arrow-as-an-assignment-operator/
+00:43:44	Gus Lipkin:	I really like the GitHub desktop app too
+00:47:48	Gus Lipkin:	About getting help online… “Cunningham's Law states "the best way to get the right answer on the internet is not to ask a question; it's to post the wrong answer.”” 
+
+https://meta.wikimedia.org/wiki/Cunningham%27s_Law
+00:53:23	Jon Harmon (jonthegeek):	stop
 ```
 </details>

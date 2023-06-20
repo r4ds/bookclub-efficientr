@@ -101,9 +101,7 @@ Other variables: `n_itr`, `n_gc`, `total_time`, `result`, `memory`, `time`, `gc`
 `r knitr::include_url("https://www.youtube.com/embed/oGz7YLw8njg")`
 
 <details>
-
 <summary>Meeting chat log</summary>
-
 ```         
 00:28:13	Keuntae_Kim:	KNIME
 00:38:26	Keuntae_Kim:	Maybe Eclipse? I do not use it, I heard that someone from CS uses it.
@@ -138,5 +136,4 @@ I have tried it initially for a while
 It was ok ok … yeah nothing beats RStudio for now
 00:54:05	Keuntae_Kim:	Bye!
 ```
-
 </details>

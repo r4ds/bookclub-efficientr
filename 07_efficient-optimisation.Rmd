@@ -13,12 +13,14 @@
 
 ### Cohort 1 {-}
 
-`r knitr::include_url("https://www.youtube.com/embed/URL")`
+`r knitr::include_url("https://www.youtube.com/embed/rmCqUMdmalE")`
 
 <details>
 <summary> Meeting chat log </summary>
-
 ```
-LOG
+00:23:51	Jon Harmon (jonthegeek):	Details: The "auto" method selects "radix" for short (less than 2^{31}2 
+31
+  elements) numeric vectors, integer vectors, logical vectors and factors; otherwise, "shell".
+00:28:29	Jon Harmon (jonthegeek):	I've written `any(is.na(x))` about a zillion times, didn't know about `anyNA()`!
 ```
 </details>
