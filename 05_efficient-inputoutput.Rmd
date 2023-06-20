@@ -144,12 +144,28 @@ Getting raw data files distributed with an R package:
 
 ### Cohort 1 {-}
 
-`r knitr::include_url("https://www.youtube.com/embed/URL")`
+`r knitr::include_url("https://www.youtube.com/embed/k7O0NZNM9eo")`
 
 <details>
 <summary> Meeting chat log </summary>
 
 ```
-LOG
+00:01:31	jim rothstein:	hello to ALL !
+00:12:11	Jon Harmon (jonthegeek):	readr got a speed-up under the hood a year or three ago: https://vroom.r-lib.org/
+00:12:20	Jon Harmon (jonthegeek):	https://vroom.r-lib.org/articles/benchmarks.html
+00:12:25	jim rothstein:	What is the `magic` in data.table ??
+00:12:39	Shah Nawaz:	data.table and data table package have same speed ?
+00:12:55	Jon Harmon (jonthegeek):	data.table is the package
+00:13:08	Shah Nawaz:	Reacted to "data.table is the pa..." with 👍🏽
+00:13:13	Jon Harmon (jonthegeek):	(not to be confused with data.frames)
+00:14:57	jim rothstein:	JSON - any comments?
+00:15:25	jim rothstein:	I loathe JSON
+00:35:09	jim rothstein:	(re:  data.table  performance ... ...)  Very dated post, but data.table has "radix" algorithm https://www.brodieg.com/2019/06/10/base-vs-data-table/
+00:35:25	jim rothstein:	Radix:    https://en.wikipedia.org/wiki/Radix_sort
+00:35:42	Shah Nawaz:	thank you
+00:39:23	guslipkin:	group_by(year) should be able to be re-written as write_dataset(partition_by = year)
+^that’s not really allowed
+00:42:05	Priyanka Gagneja:	Reacted to "group_by(year) shoul..." with 👍
+00:49:38	Jon Harmon (jonthegeek):	I have to get the door, sorry!
 ```
 </details>

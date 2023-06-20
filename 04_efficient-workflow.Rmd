@@ -85,12 +85,12 @@ Consider treating a project as an R package?
 
 ### Cohort 1 {-}
 
-`r knitr::include_url("https://www.youtube.com/embed/URL")`
+`r knitr::include_url("https://www.youtube.com/embed/TpPFbZ0Z0-k")`
 
 <details>
 <summary> Meeting chat log </summary>
 
 ```
-LOG
+00:23:13	priyanka gagneja:	Dint know about that. Cran task view haa
 ```
 </details>

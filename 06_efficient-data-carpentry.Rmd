@@ -110,12 +110,21 @@ From DESCRIPTION:
 
 ### Cohort 1 {-}
 
-`r knitr::include_url("https://www.youtube.com/embed/URL")`
+`r knitr::include_url("https://www.youtube.com/embed/tIFzWkf9mt0")`
 
 <details>
 <summary> Meeting chat log </summary>
 
 ```
-LOG
+00:04:18	Gus Lipkin:	https://atrebas.github.io/post/2019-03-03-datatable-dplyr/
+00:09:07	Jon Harmon (jonthegeek):	start
+00:11:46	Gus Lipkin:	I misread that as “nerd” modifying “Hadley Wickham” and not “famous” at first 😂
+00:20:50	Gus Lipkin:	There’s also tidytable (https://markfairbanks.github.io/tidytable/)
+
+Some people strongly prefer one over the other.
+00:22:18	Gus Lipkin:	“To use dtplyr, you must at least load dtplyr and dplyr. You may also want to load data.table so you can access the other goodies that it provides:”
+
+“But generally you should reserve this only for debugging, and use as.data.table(), as.data.frame(), or as_tibble() to indicate that you’re done with the transformation and want to access the results:”
+00:23:48	Gus Lipkin:	“reserve this only for debugging” refers to not casting as suggested
 ```
 </details>

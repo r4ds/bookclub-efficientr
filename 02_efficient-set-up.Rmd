@@ -73,12 +73,12 @@ r2 <- parallel::mclapply(X, median)
 
 ### Cohort 1 {-}
 
-`r knitr::include_url("https://www.youtube.com/embed/URL")`
+`r knitr::include_url("https://www.youtube.com/embed/xbJ9Q0jq-KU")`
 
 <details>
 <summary> Meeting chat log </summary>
 
 ```
-LOG
+00:37:45	Jon Harmon (jonthegeek):	usethis::git_vaccinate()
 ```
 </details>

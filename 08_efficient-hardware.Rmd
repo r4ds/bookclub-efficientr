@@ -240,12 +240,14 @@ If you're pushing/pulling large amounts of storage from a network drive, your ne
 
 ### Cohort 1 {-}
 
-`r knitr::include_url("https://www.youtube.com/embed/URL")`
+`r knitr::include_url("https://www.youtube.com/embed/SZdgkh3gg9A")`
 
 <details>
 <summary> Meeting chat log </summary>
 
 ```
-LOG
+00:07:05	Jon Harmon (jonthegeek):	start
+00:08:53	Jon Harmon (jonthegeek):	American Standard Code for Information Interchange
+00:42:22	Jon Harmon (jonthegeek):	stop
 ```
 </details>

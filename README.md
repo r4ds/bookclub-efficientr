@@ -11,7 +11,7 @@ As we read, we are producing [notes about the book](https://r4ds.io/efficientr).
 
 If you would like to present, please see the sign-up sheet for your cohort (linked below, and pinned in the [#book_club-efficientr](https://rfordatascience.slack.com/archives/C04UDEF0SG4) channel on Slack)!
 
-- [Cohort 1](https://docs.google.com/spreadsheets/d/14ZEsvT-qaNRCvdJk_IXMLbZ_gXF4wJeSMlhNJNobhQs/edit?usp=sharing) (started 2023-04-05, facilitated by jonthegeek): [Wednesdays, 1:00PM CST/CDT](https://www.timeanddate.com/worldclock/converter.html?iso=20230405T180000&p1=24&p2=1440) | [meeting videos](https://youtube.com/playlist?list=PL3x6DOfs2NGiHng8tTFaQrPkJoJNgCJPu)
+- Cohort 1 (started 2023-04-05, finished 2023-06-14): [meeting videos](https://youtube.com/playlist?list=PL3x6DOfs2NGiHng8tTFaQrPkJoJNgCJPu)
 
 <hr>
 

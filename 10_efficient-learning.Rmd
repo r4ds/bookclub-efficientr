@@ -134,12 +134,36 @@ help(topic, package = NULL, lib.loc = NULL,
 
 ### Cohort 1 {-}
 
+`r knitr::include_url("https://www.youtube.com/embed/Uohg4SbSNSg")`
 `r knitr::include_url("https://www.youtube.com/embed/URL")`
 
 <details>
 <summary> Meeting chat log </summary>
-
 ```
-LOG
+00:09:00	Jon Harmon (jonthegeek):	start
+00:47:30	Shah Nawaz:	Have you ever thought of doing seo of our r4ds channel ?
+00:48:33	Shah Nawaz:	no i mean youtube channel
+01:03:23	Keith Baxelbaum:	I've gotta run, thanks for this, Jon!
+01:04:47	Jon Harmon (jonthegeek):	stop
+```
+</details>
+
+<details>
+<summary> Meeting chat log </summary>
+```
+00:08:14	Jon Harmon (jonthegeek):	start
+00:14:29	Shah Nawaz:	Use of data reading through reader and rio package especially. We used the parquet format in our cohort.
+00:32:32	Floris Vanderhaeghe:	Slides of the bookclubs: https://r4ds.github.io/bookclub-efficientr/
+00:34:23	Shah Nawaz:	Any other book colin is writing or have written which we are unaware of
+00:49:23	Priyanka G:	Kevin ushey's rstudio conf 2020 talk
+00:49:32	Priyanka G:	Is the best resource for renv
+00:49:52	Shah Nawaz:	Reacted to "Is the best resource..." with 👍
+00:51:32	Jon Harmon (jonthegeek):	https://www.manning.com/books/five-lines-of-code
+00:52:02	Priyanka G:	Aah Robert Martin.
+00:52:31	Priyanka G:	I think he also wrote one book called how to write clean code or something
+00:53:13	Priyanka G:	I heard somewhere that a fn shd ideally have 7 lines.. dint know if that's what 5 lines is used figuratively
+00:53:43	Priyanka G:	Another place it said .. that a fn shd just do 1 thing.. whatever it takes
+00:54:21	Priyanka G:	Yea absolutely 💯
+01:00:44	Jon Harmon (jonthegeek):	stop
 ```
 </details>
