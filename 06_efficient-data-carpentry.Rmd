@@ -75,7 +75,7 @@ The logos that are on [tidyverse.org](https://www.tidyverse.org/):
 -   {magrittr}: A Forward-Pipe Operator for R
     -   Base pipe: |>
 -   {modelr}: Modelling Functions that Work with the Pipe
-    -   Not covered in R4DS 2e
+    -   Not covered in DSLC 2e
     -   {tidymodels}
 
 ## janitor {-}

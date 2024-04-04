@@ -41,7 +41,7 @@ r2 <- parallel::mclapply(X, median)
 -   `.Renviron`: set environment variables
 -   `.Rprofile`: run R code
 -   `usethis::edit_r_environ()` & `usethis::edit_r_profile()`
--   [What They Forgot to Teach You About R Book Club](r4ds.io/rwtf)
+-   [What They Forgot to Teach You About R Book Club](dslc.io/rwtf)
 -   `options(continue = "  ")` is new to me!
 -   `.Last()` runs at *end* of session
 

@@ -7,7 +7,7 @@ bibliography: book.bib
 biblio-style: apalike
 link-citations: yes
 github-repo: r4ds/bookclub-efficientr
-description: "This website is the product of the R4DS Online Learning Community's Efficient R programming Book Club."
+description: "This website is the product of the Data Science Learning Community's Efficient R programming Book Club."
 ---
 
 # Welcome {-}
@@ -15,10 +15,10 @@ description: "This website is the product of the R4DS Online Learning Community'
 This website is a companion for the book [***Efficient R programming***](https://csgillespie.github.io/efficientR/index.html) by **Colin Gillespie &  Robin Lovelace** (copyright 2021).
 
 -   These are **shared slides!**
-    -   Developed by the [**R4DS Online Learning Community**](https://rfordatasci.com).
-    -   [**Join the community**](https://r4ds.io/join) to participate!
-    -   Available at [**r4ds.io/efficientr**](https://r4ds.io/efficientr).
--   We follow the [**R4DS Online Learning Community Code of Conduct**](https://r4ds.io/conduct).
+    -   Developed by the [**Data Science Learning Community**](https://dslc.io).
+    -   [**Join the community**](https://dslc.io/join) to participate!
+    -   Available at [**dslc.io/efficientr**](https://dslc.io/efficientr).
+-   We follow the [**Data Science Learning Community Code of Conduct**](https://dslc.io/conduct).
 
 ## Pace {-}
 
@@ -36,4 +36,4 @@ This website is a companion for the book [***Efficient R programming***](https:/
     -   Review, discussion, demonstration, combo.
 -   Ideally **update shared slides**.
     -   Instructions in [github repo](https://github.com/r4ds/bookclub-efficientr).
--   Presentations **recorded** & available on [**R4DS Online Learning Community YouTube Channel**](https://r4ds.io/youtube).
+-   Presentations **recorded** & available on [**Data Science Learning Community YouTube Channel**](https://dslc.io/youtube).

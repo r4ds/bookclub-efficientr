@@ -92,7 +92,7 @@ help(topic, package = NULL, lib.loc = NULL,
 
 -   Package websites have become super helpful
 -   Posit has [Quarto versions of core R manuals](https://rstudio.github.io/r-manuals/)
--   We've talked about doing an "R Journal Club" at R4DS, watch for that!
+-   We've talked about doing an "R Journal Club" at DSLC, watch for that!
 -   [rdrr.io](https://rdrr.io/) & [R Universe](https://r-universe.dev/search/)
 -   [R-bloggers](https://www.r-bloggers.com/)
 -   [rOpenSci Blog](https://ropensci.org/blog/)
@@ -101,7 +101,7 @@ help(topic, package = NULL, lib.loc = NULL,
 ## Reprexes & online help {-}
 
 -   Use [{reprex}](https://cran.r-project.org/package=reprex) for **repr**oducible **ex**amples
--   [R4DS #help-\* channels](https://r4ds.io/join)
+-   [DSLC #help-\* channels](https://dslc.io/join)
 -   [Posit Community](https://community.rstudio.com/)
 -   [discoRd](https://discord.gg/UBuG5hzu)
 -   #RStats on Mastodon, LinkedIn, & Twitter
@@ -116,14 +116,14 @@ help(topic, package = NULL, lib.loc = NULL,
 -   Past:
     -   85 YouTube playlists
     -   1337 videos
--   See #book_club-announce & #book_club-\* on [R4DS Slack](https://r4ds.io/join)
+-   See #book_club-announce & #book_club-\* on [DSLC Slack](https://dslc.io/join)
 
 ## Teach {-}
 
 > "By teaching, we learn."
 
--   Answer questions on R4DS!
-    -   [r4ds.io/mentordash](https://r4ds.io/mentordash) 👈 unanswered questions
+-   Answer questions on DSLC!
+    -   [dslc.io/mentordash](https://dslc.io/mentordash) 👈 unanswered questions
 -   Lead a discussion in a book club!
 -   Write a blog!
 -   Improve package documentation! 
