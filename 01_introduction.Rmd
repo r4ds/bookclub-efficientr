@@ -26,7 +26,7 @@ Answer: Everybody!
 **Let's get to know one another!**
 
 1.  What's your **name** & **location?**
-2.  How many **R4DS book clubs** have you participated in?
+2.  How many **DSLC book clubs** have you participated in?
 3.  How much **experience** do you have **with R?** How do you use it?
 4.  How much **programming experience** do you have outside R (if any)?
 
